@@ -2,14 +2,13 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab, faStackOverflow, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import {
-  faGem,
-  faBars
-        } from '@fortawesome/free-solid-svg-icons';
+import { faGem, faBars } from '@fortawesome/free-solid-svg-icons';
 import './App.css';
 import Navigation from './components/Navigation';
 import About from './components/About';
+import Portfolio from './components/Portfolio';
 import Footer from './components/Footer';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 library.add(fab, faGem, faBars, faStackOverflow, faGithub, faLinkedin);
 
@@ -37,13 +36,26 @@ colors:
   red: #D81E5B;
 */
 
+const STYLES = styled.div`
+  height: 100VH;
+
+  .app {
+    height: 100VH;
+  }
+`;
+
 function App() {
   return (
-    <div className="App">
-      <Navigation />
-      <About />
-      <Footer />
-    </div>
+    <STYLES>
+      <div className="App">
+        <Navigation />
+          <Router>
+            <Route exact path="/" component={About} />
+            <Route path="/portfolio" component={Portfolio} />
+          </Router>
+        <Footer />
+      </div>
+    </STYLES>
   );
 }
 

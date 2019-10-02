@@ -19,6 +19,13 @@ const STYLES = styled.div`
   .navbar-nav .nav-link {
     color: #20FC8F !important;
   }
+
+  .navbar-light .navbar-toggler-icon::before {
+    content: "\f099";
+    font-family: "Font Awesome 5 Brands";
+    font-weight: normal;
+    margin: 0 10px 0 0;
+  }
 `;
 
 const H1 = styled.h1`
@@ -43,7 +50,7 @@ class Navigation extends Component {
       <STYLES className="d-block d-md-none">
       <Navbar expand="lg">
 				<Navbar.Brand href="#home">
-          <FontAwesomeIcon icon="gem" color="#20FC8F" size="2x" />
+          <FontAwesomeIcon icon="gem" color="#20FC8F" size="2x"/>
         </Navbar.Brand>
         <H1>Nick Kinlen</H1>
 				<Navbar.Toggle aria-controls="basic-navbar-nav"/>
