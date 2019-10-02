@@ -8,9 +8,17 @@ const STYLES = styled.div`
   //font-family: 'IBM Plex Serif', serif;
   //font-family: 'IBM Plex Mono', monospace;
   background: #181818;
-  height: 100%;
-  display: inline-block;
+  height: 5em;
 
+  .navbar {
+    width: 100%;
+    background: #181818;
+    display: flex;
+  }
+
+  .navbar-nav .nav-link {
+    color: #20FC8F !important;
+  }
 `;
 
 const H1 = styled.h1`
@@ -21,7 +29,7 @@ const H1 = styled.h1`
 `;
 
 
-class Sidebar extends Component {
+class Navigation extends Component {
   constructor(props){
     super(props);
 
@@ -32,14 +40,23 @@ class Sidebar extends Component {
 
   render() {
     return(
-      <STYLES className="d-none d-md-block">
-      <Col md={4}>
-        <h1>Sidebar</h1>
-
-      </Col>
+      <STYLES className="d-block d-md-none">
+      <Navbar expand="lg">
+				<Navbar.Brand href="#home">
+          <FontAwesomeIcon icon="gem" color="#20FC8F" size="2x" />
+        </Navbar.Brand>
+        <H1>Nick Kinlen</H1>
+				<Navbar.Toggle aria-controls="basic-navbar-nav"/>
+				<Navbar.Collapse id="basic-navbar-nav">
+					<Nav className="mr-auto">
+						<Nav.Link href="#home">Home</Nav.Link>
+						<Nav.Link href="#link">Link</Nav.Link>
+					</Nav>
+				</Navbar.Collapse>
+			</Navbar>
       </STYLES>
     );
   }
 }
 
-export default Sidebar;
+export default Navigation;

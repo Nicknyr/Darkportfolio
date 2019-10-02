@@ -15,7 +15,7 @@ const STYLES = styled.div`
 
 const Footer = () => {
   return(
-    <STYLES>
+    <STYLES className="d-block d-md-none">
       <Container>
         <Row>
           <Col xs={12}>

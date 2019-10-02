@@ -7,7 +7,7 @@ import {
   faBars
         } from '@fortawesome/free-solid-svg-icons';
 import './App.css';
-import Sidebar from './components/Sidebar';
+import Navigation from './components/Navigation';
 import About from './components/About';
 import Footer from './components/Footer';
 
@@ -40,7 +40,7 @@ colors:
 function App() {
   return (
     <div className="App">
-      <Sidebar />
+      <Navigation />
       <About />
       <Footer />
     </div>
