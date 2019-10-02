@@ -1,24 +1,48 @@
 import React from 'react';
-import logo from './logo.svg';
+import styled, { css } from 'styled-components';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab, faStackOverflow, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import {
+  faGem,
+  faBars
+        } from '@fortawesome/free-solid-svg-icons';
 import './App.css';
+import Sidebar from './components/Sidebar';
+import About from './components/About';
+import Footer from './components/Footer';
+
+library.add(fab, faGem, faBars, faStackOverflow, faGithub, faLinkedin);
+
+/*
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+
+
+colors:
+  black: #181818;
+  green: #20FC8F;
+  grey: #222222;
+  red: #D81E5B;
+*/
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Sidebar />
+      <About />
+      <Footer />
     </div>
   );
 }
