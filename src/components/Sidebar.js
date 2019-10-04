@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styled, { css } from 'styled-components';
 import { Container, Row, Col, Navbar, Brand, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
-import { TweenLite } from 'gsap';
+import { Tween, Timeline, Controls, SplitWords, SplitLetters } from 'react-gsap';
 import { Link } from 'react-router-dom';
 
 const STYLES = styled.div`
@@ -84,76 +84,71 @@ class Sidebar extends Component {
     this.state = {
 
     };
-    // reference to the DOM node
-    this.myElement = null;
-    // reference to the animation
-    this.myTween = null;
-  }
 
-  componentDidMount = () => {
-    // use the node ref to create the animation
-    //this.myTween = TweenLite.to(this.myElement, 1, {x: 100, y: 100});
-  };
+  }
 
   render() {
     return(
-      <STYLES className="d-none d-md-block">
-      <Col>
-        <Col className="home-link">
-          <Link to="/home">
-            <FontAwesomeIcon icon="gem" color="#20FC8F" size="4x" />
-            <H1>Nick Kinlen</H1>
-            <H5>Frontend Web Developer</H5>
-          </Link>
-        </Col>
-        <ul className="navigation">
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/portfolio">Portfolio</Link>
-          </li>
-          <li>
-            <Link to="/contact">Contact</Link>
-          </li>
-          <li>
-            <Link to="/blog">Blog</Link>
-          </li>
-        </ul>
-        <ul className="social">
-          <li>
-            <a href="https://www.linkedin.com/in/nicholas-kinlen/">
-              <FontAwesomeIcon
-                     icon={['fab', 'linkedin']}
-                     size="2x"
-                     color="#20FC8F"
-                     />
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/Nicknyr">
-              <FontAwesomeIcon
-                     icon={['fab', 'github']}
-                     size="2x"
-                     color="#20FC8F"
-                   />
-            </a>
-          </li>
-          <li>
-            <a href="https://stackoverflow.com/users/3875620/nick-kinlen">
-             <FontAwesomeIcon
-                    icon={['fab', 'stack-overflow']}
-                    size="2x"
-                    color="#20FC8F"
-                  />
-            </a>
-          </li>
-        </ul>
-      </Col>
-      </STYLES>
+      <Tween from={{ x: '-500px' }}>
+        <STYLES className="d-none d-md-block">
+          <Col>
+            <Col className="home-link">
+              <Link to="/home">
+                <FontAwesomeIcon icon="gem" color="#20FC8F" size="4x" />
+                <H1>Nick Kinlen</H1>
+                <H5>Frontend Web Developer</H5>
+              </Link>
+            </Col>
+            <ul className="navigation">
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/about">About</Link>
+              </li>
+              <li>
+                <Link to="/portfolio">Portfolio</Link>
+              </li>
+              <li>
+                <Link to="/contact">Contact</Link>
+              </li>
+              <li>
+                <Link to="/blog">Blog</Link>
+              </li>
+            </ul>
+            {/*</Tween>*/}
+            <ul className="social">
+              <li>
+                <a href="https://www.linkedin.com/in/nicholas-kinlen/">
+                  <FontAwesomeIcon
+                         icon={['fab', 'linkedin']}
+                         size="2x"
+                         color="#20FC8F"
+                         />
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/Nicknyr">
+                  <FontAwesomeIcon
+                         icon={['fab', 'github']}
+                         size="2x"
+                         color="#20FC8F"
+                       />
+                </a>
+              </li>
+              <li>
+                <a href="https://stackoverflow.com/users/3875620/nick-kinlen">
+                 <FontAwesomeIcon
+                        icon={['fab', 'stack-overflow']}
+                        size="2x"
+                        color="#20FC8F"
+                      />
+                </a>
+              </li>
+            </ul>
+          </Col>
+        </STYLES>
+      </Tween>
     );
   }
 }
