@@ -6,7 +6,10 @@ import { faGem, faBars } from '@fortawesome/free-solid-svg-icons';
 import './App.css';
 import Navigation from './components/Navigation';
 import About from './components/About';
+import Home from './components/Home';
 import Portfolio from './components/Portfolio';
+import Contact from './components/Contact';
+import Blog from './components/Blog';
 import Footer from './components/Footer';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
@@ -36,26 +39,20 @@ colors:
   red: #D81E5B;
 */
 
-const STYLES = styled.div`
-  height: 100VH;
-
-  .app {
-    height: 100VH;
-  }
-`;
 
 function App() {
   return (
-    <STYLES>
       <div className="App">
         <Navigation />
           <Router>
-            <Route exact path="/" component={About} />
-            <Route path="/portfolio" component={Portfolio} />
+            <Route exact path="/" component={Home} />
+            <Route exact path="/about" component={About} />
+            <Route exact path="/portfolio" component={Portfolio} />
+            <Route exact path="/contact" component={Contact} />
+            <Route exact path="/blog" component={Blog} />
           </Router>
         <Footer />
       </div>
-    </STYLES>
   );
 }
 

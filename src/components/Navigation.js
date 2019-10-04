@@ -26,6 +26,12 @@ const STYLES = styled.div`
     font-weight: normal;
     margin: 0 10px 0 0;
   }
+
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
 `;
 
 const H1 = styled.h1`
@@ -49,15 +55,20 @@ class Navigation extends Component {
     return(
       <STYLES className="d-block d-md-none">
       <Navbar expand="lg">
-				<Navbar.Brand href="#home">
+				<Navbar.Brand href="/home">
           <FontAwesomeIcon icon="gem" color="#20FC8F" size="2x"/>
         </Navbar.Brand>
-        <H1>Nick Kinlen</H1>
+        <a href="/home">
+          <H1>Nick Kinlen</H1>
+        </a>
 				<Navbar.Toggle aria-controls="basic-navbar-nav"/>
 				<Navbar.Collapse id="basic-navbar-nav">
 					<Nav className="mr-auto">
-						<Nav.Link href="#home">Home</Nav.Link>
-						<Nav.Link href="#link">Link</Nav.Link>
+						<Nav.Link href="/">Home</Nav.Link>
+						<Nav.Link href="/about">About</Nav.Link>
+            <Nav.Link href="/portfolio">Portfolio</Nav.Link>
+            <Nav.Link href="/contact">Contact</Nav.Link>
+						<Nav.Link href="/blog">Blog</Nav.Link>
 					</Nav>
 				</Navbar.Collapse>
 			</Navbar>

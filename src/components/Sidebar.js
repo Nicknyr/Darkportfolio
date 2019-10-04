@@ -3,13 +3,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styled, { css } from 'styled-components';
 import { Container, Row, Col, Navbar, Brand, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
 import { TweenLite } from 'gsap';
+import { Link } from 'react-router-dom';
 
 const STYLES = styled.div`
   @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono|IBM+Plex+Serif&display=swap');
   //font-family: 'IBM Plex Serif', serif;
   //font-family: 'IBM Plex Mono', monospace;
   background: #181818;
-  height: 100%;
+  height: 100VH;
   display: flex;
   text-align: center;
   margin-left: auto;
@@ -99,27 +100,27 @@ class Sidebar extends Component {
       <STYLES className="d-none d-md-block">
       <Col>
         <Col className="home-link">
-          <a href="#">
+          <Link to="/home">
             <FontAwesomeIcon icon="gem" color="#20FC8F" size="4x" />
             <H1>Nick Kinlen</H1>
             <H5>Frontend Web Developer</H5>
-          </a>
+          </Link>
         </Col>
         <ul className="navigation">
           <li>
-            <a href="#">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="#">About</a>
+            <Link to="/about">About</Link>
           </li>
           <li>
-            <a href="#">Portfolio</a>
+            <Link to="/portfolio">Portfolio</Link>
           </li>
           <li>
-            <a href="#">Contact</a>
+            <Link to="/contact">Contact</Link>
           </li>
           <li>
-            <a href="#">Blog</a>
+            <Link to="/blog">Blog</Link>
           </li>
         </ul>
         <ul className="social">

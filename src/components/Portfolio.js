@@ -18,12 +18,26 @@ const STYLES = styled.div`
     flex-flow: row wrap;
     padding-top: 5em;
     padding-bottom: 5em;
+    opacity: 1;
+    animation-name: fadeInOpacity;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 2s;
 
     .card {
       margin-top: 2em;
       margin-bottom: 2em;
     }
   }
+
+  @keyframes fadeInOpacity {
+    0% {
+    opacity: 0;
+    }
+    100% {
+    opacity: 1;
+    }
+}
 }
 `;
 
