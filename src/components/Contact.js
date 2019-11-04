@@ -11,6 +11,7 @@ const STYLES = styled.div`
   height: auto;
   background: #222222;
   color: snow;
+  height: 100%;
 
   p {
     padding-left: 1em;
@@ -28,6 +29,7 @@ const STYLES = styled.div`
     animation-iteration-count: 1;
     animation-timing-function: ease-in;
     animation-duration: 2s;
+    //background: red;
   }
 
   h2 {
@@ -57,8 +59,11 @@ const Contact = () => {
         <Col md={4}>
           <Sidebar />
         </Col>
-        <Col xs={{span:12}} md={{span: 8}} className="contact">
+        <Col xs={{span: 12}} sm={{span: 10, offset: 1}} md={{span: 6, offset: 1}} className="contact">
           <h2>Contact</h2>
+          <p>If you would like to get in touch with me send me an email at <a href="mailto:nick_kinlen@hotmail.com">nick_kinlen@hotmail.com,</a> or shoot me a message on
+            <a href="https://www.linkedin.com/in/nicholas-kinlen/"> Linkedin.</a>
+          </p>
         </Col>
       </Row>
     </STYLES>

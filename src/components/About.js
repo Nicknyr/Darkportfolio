@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styled, { css } from 'styled-components';
 import Sidebar from './Sidebar';
-import { Container, Row, Col, Navbar, Brand, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
+import { Container, Row, Col, Navbar, Brand, Nav, NavDropdown, Form, FormControl, Button, Image } from 'react-bootstrap';
+import myPic from '../assets/me.jpeg';
 
 const STYLES = styled.div`
   @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono|IBM+Plex+Serif&display=swap');
@@ -28,6 +29,16 @@ const STYLES = styled.div`
     animation-iteration-count: 1;
     animation-timing-function: ease-in;
     animation-duration: 2s;
+
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      margin-top: 2em;
+      margin-bottom: 2em;
+    }
+
   }
 
   h2 {
@@ -57,8 +68,9 @@ const About = () => {
         <Col md={4}>
           <Sidebar />
         </Col>
-        <Col xs={{span:12}} md={{span: 8}} className="about-section">
+        <Col xs={{span: 12}} sm={{span: 10, offset: 1}} md={{span: 6, offset: 1}} className="about-section">
           <h2>About Me</h2>
+          <Image src={myPic} height="200" roundedCircle />
           <p>My name is Nick Kinlen and I am a front-end web developer living in the New York City metro area. I am passionate about all things web development with a focus on Javascript and React.</p>
           <p>I have 3 years experience building web applications and primarily use Javascript/HTML5/CSS as well as React.js, Redux, and other Javascript libraries such as Mapbox, Leaflet, D3, & Jquery.</p>
           <p>In addition to being passionate about technology I am also passionate about New York Rangers hockey, cryptocurrencies, entreprenurship, and working out.</p>

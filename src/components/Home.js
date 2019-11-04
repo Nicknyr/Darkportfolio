@@ -4,6 +4,7 @@ import styled, { css } from 'styled-components';
 import Sidebar from './Sidebar';
 import { Container, Row, Col, Navbar, Brand, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
 import { Tween, Timeline, Controls, SplitWords, SplitLetters } from 'react-gsap';
+import Slider from './Slider';
 
 const Square = styled.div`
   background-color: red;
@@ -44,8 +45,14 @@ const STYLES = styled.div`
     100% {
     opacity: 1;
     }
+
+    .technologies {
+    }
+
+
 }
 `;
+
 
 const Home = () => {
   return(
@@ -55,11 +62,6 @@ const Home = () => {
           <Sidebar />
         </Col>
         <Col xs={{span:12}} md={{span: 8}} className="home" >
-
-          <Tween from={{ x: '100px', rotation: -360 }}>
-            <h2>Hi, my name is Nick and I am a frontend developer from NYC</h2>
-          </Tween>
-
           <Timeline
             target={
               <h2>Hi, my name is Nick and I am a frontend developer from NYC</h2>
@@ -68,25 +70,11 @@ const Home = () => {
             <Tween from={{ opacity: 0 }} to={{ opacity: 1 }} />
             <Tween from={{ x: '1200px' }} />
           </Timeline>
-
-
-            <Tween
-              from={{ x: '1000' }}
-              duration={1}
-
-
-            >
-              <SplitWords>
-                <div style={{ display: 'inline-block', fontSize: '40px' }}>
-                  This is a Test
-                </div>
-              </SplitWords>
-            </Tween>
-
-            {/*
+          {/* <Slider /> */}
+          {/*
             <Tween
               staggerFrom={{ x: '300px' }}
-              stagger={0.5}
+              stagger={0.1}
               duration={0.3}
               ease="Elastic.easeOut"
             >
@@ -95,10 +83,10 @@ const Home = () => {
               </SplitLetters>
             </Tween>
             */}
-
+            
             <Tween
               wrapper={
-                <ul style={{ perspective: '1000px', fontSize: '1.5rem' }} />
+                <ul style={{ perspective: '1000px', fontSize: '1.5rem' }} className="technologies" />
               }
               staggerFrom={{
                 opacity: 0,
@@ -110,16 +98,56 @@ const Home = () => {
               duration={1}
               stagger={0.1}
             >
-              <li>Rich Harris</li>
-              <li>Dan Abramov</li>
-              <li>Kyle Simpson</li>
-              <li>Gregory Brown</li>
-              <li>Addy Osmani</li>
-              <li>Evan You</li>
-              <li>Axel Rauschmayer</li>
-              <li>Sarah Drasner</li>
-              <li>André Staltz</li>
+              <li>
+                <h3>React</h3>
+                <FontAwesomeIcon
+                   icon={['fab', 'react']}
+                   size="lg"
+                   color="#D81E5B"
+                 />
+              </li>
+              <li>
+                <h3>CSS3</h3>
+                <FontAwesomeIcon
+                   icon={['fab', 'css3']}
+                   size="lg"
+                   color="#D81E5B"
+                 />
+              </li>
+              <li>
+                <h3>HTML5</h3>
+                <FontAwesomeIcon
+                   icon={['fab', 'html5']}
+                   size="lg"
+                   color="#D81E5B"
+                 />
+             </li>
+              <li>
+                <h3>Javascript</h3>
+                <FontAwesomeIcon
+                   icon={['fab', 'js']}
+                   size="lg"
+                   color="#D81E5B"
+                 />
+              </li>
+              <li>
+                <h3>Git</h3>
+                <FontAwesomeIcon
+                   icon={['fab', 'git-alt']}
+                   size="lg"
+                   color="#D81E5B"
+                 />
+              </li>
+              <li>
+                <h3>NodeJS</h3>
+                <FontAwesomeIcon
+                   icon={['fab', 'node']}
+                   size="lg"
+                   color="#D81E5B"
+                 />
+              </li>
             </Tween>
+            
 
             {/*
 

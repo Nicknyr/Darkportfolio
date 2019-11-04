@@ -10,7 +10,7 @@ const STYLES = styled.div`
   //font-family: 'IBM Plex Serif', serif;
   //font-family: 'IBM Plex Mono', monospace;
   background: #181818;
-  height: 100VH;
+  height: 100%;
   display: flex;
   text-align: center;
   margin-left: auto;

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { fab, faStackOverflow, faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { fab, faStackOverflow, faGithub, faLinkedin, faReact, faCss3, faHtml5, faJs, faGitAlt, faNode } from '@fortawesome/free-brands-svg-icons';
 import { faGem, faBars } from '@fortawesome/free-solid-svg-icons';
 import './App.css';
 import Navigation from './components/Navigation';
@@ -11,9 +11,10 @@ import Portfolio from './components/Portfolio';
 import Contact from './components/Contact';
 import Blog from './components/Blog';
 import Footer from './components/Footer';
+import SVG from './components/SVG';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
-library.add(fab, faGem, faBars, faStackOverflow, faGithub, faLinkedin);
+library.add(fab, faGem, faBars, faStackOverflow, faGithub, faLinkedin, faReact, faCss3, faHtml5, faJs, faGitAlt, faNode);
 
 /*
 // Extra small devices (portrait phones, less than 576px)
@@ -46,6 +47,7 @@ function App() {
         <Navigation />
           <Router>
             <Route exact path="/" component={Home} />
+            <Route exact path="/svg" component={SVG} />
             <Route exact path="/about" component={About} />
             <Route exact path="/portfolio" component={Portfolio} />
             <Route exact path="/contact" component={Contact} />
