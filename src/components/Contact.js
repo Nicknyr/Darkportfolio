@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import styled, { css } from 'styled-components';
 import Sidebar from './Sidebar';
 import { Container, Row, Col, Navbar, Brand, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
+import ContactForm from './ContactForm';
 
 const STYLES = styled.div`
   @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono|IBM+Plex+Serif&display=swap');
@@ -11,8 +12,13 @@ const STYLES = styled.div`
   height: auto;
   background: #222222;
   color: snow;
-  height: 100%;
 
+  h2 {
+    padding: 1em;
+    color: #20FC8F;
+    text-align: center;
+  }
+  
   p {
     padding-left: 1em;
     padding-right: 1em;
@@ -56,14 +62,12 @@ const Contact = () => {
   return(
     <STYLES>
       <Row>
-        <Col md={4}>
+        <Col md={3}>
           <Sidebar />
         </Col>
         <Col xs={{span: 12}} sm={{span: 10, offset: 1}} md={{span: 6, offset: 1}} className="contact">
           <h2>Contact</h2>
-          <p>If you would like to get in touch with me send me an email at <a href="mailto:nick_kinlen@hotmail.com">nick_kinlen@hotmail.com,</a> or shoot me a message on
-            <a href="https://www.linkedin.com/in/nicholas-kinlen/"> Linkedin.</a>
-          </p>
+          <ContactForm />
         </Col>
       </Row>
     </STYLES>

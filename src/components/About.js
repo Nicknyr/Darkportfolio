@@ -65,7 +65,7 @@ const About = () => {
   return(
     <STYLES>
       <Row>
-        <Col md={4}>
+        <Col md={3}>
           <Sidebar />
         </Col>
         <Col xs={{span: 12}} sm={{span: 10, offset: 1}} md={{span: 6, offset: 1}} className="about-section">

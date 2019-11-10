@@ -20,6 +20,12 @@ const STYLES = styled.div`
   background: #222222;
   color: snow;
 
+  h2 {
+    padding: 1em;
+    color: #20FC8F;
+    text-align: center;
+  }
+
   .projects {
     display: flex;
     justify-content: space-around;
@@ -62,7 +68,7 @@ const Portfolio = () => {
   return(
     <STYLES>
       <Row>
-        <Col md={4}>
+        <Col md={3}>
           <Sidebar />
         </Col>
         <Col xs={{span:12}} md={{span: 8}} className="projects" >

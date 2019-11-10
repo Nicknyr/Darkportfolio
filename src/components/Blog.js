@@ -54,7 +54,7 @@ const Blog = () => {
   return(
     <STYLES>
       <Row>
-        <Col md={4}>
+        <Col md={3}>
           <Sidebar />
         </Col>
         <Col xs={{span:12}} md={{span: 8}} className="blog">
